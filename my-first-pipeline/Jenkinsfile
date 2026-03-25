@@ -3,6 +3,11 @@ pipeline {
     docker { image 'node:16-alpine' }
   }
   stages {
+    stage('Compile code') {
+      steps {
+        sh 'node --version'
+      }
+    }
     stage('Test') {
       steps {
         sh 'node --version'
